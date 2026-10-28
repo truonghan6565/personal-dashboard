@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng Quản Lý Cá Nhân</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Bảng Điều Khiển Cá Nhân</h1>
+      <div id="clock">00:00:00</div>
+    </header>
+
+    <section class="card">
+        <h2>Lối Tắt Thường Dùng</h2>
+        <div class="input-group">
+          <input type="text" id="bm-name" placeholder="Tên trang (vd: GitHub)...">
+          <input type="text" id="bm-url" placeholder="URL (vd: https://github.com)...">
+          <button id="bm-add">Lưu</button>
+        </div>
+        <div id="bm-list" style="display: flex; flex-wrap: wrap; gap: 8px;"></div>
+      </section>
+    <main class="grid-layout">
+      <!-- To-Do List -->
+      <section class="card">
+        <h2>Nhiệm Vụ Cần Làm</h2>
+        <div class="input-group">
+          <input type="text" id="todo-input" placeholder="Thêm công việc mới...">
+          <button id="add-todo-btn">Thêm</button>
+        </div>
+        <ul id="todo-list"></ul>
+      </section>
+
+      <!-- Quick Notes -->
+      <section class="card">
+        <h2>Ghi Chú Nhanh</h2>
+        <textarea id="notes" placeholder="Ghi chú ý tưởng, nội dung quan trọng tại đây..."></textarea>
+        <button id="save-note-btn">Lưu Ghi Chú</button>
+        <span id="note-status" class="status-text"></span>
+      </section>
+      <section class="card">
+  <h2>Tập Trung (Pomodoro)</h2>
+  <div style="text-align: center; margin: 15px 0;">
+    <span id="pomo-display" style="font-size: 2.2rem; font-weight: bold; color: var(--accent);">25:00</span>
+  </div>
+  <div style="display: flex; gap: 10px; justify-content: center;">
+    <button id="pomo-start">Bắt đầu</button>
+    <button id="pomo-pause">Tạm dừng</button>
+    <button id="pomo-reset">Đặt lại</button>
+  </div>
+      </section>
+      <section class="card">
+  <h2>Sổ Thu Chi</h2>
+  <div class="input-group">
+    <input type="text" id="exp-name" placeholder="Khoản chi (vd: Cơm trưa)...">
+    <input type="number" id="exp-amount" placeholder="Số tiền..." style="max-width: 130px;">
+    <button id="exp-add">Thêm</button>
+  </div>
+  <div style="margin-bottom: 10px; font-weight: 500;">
+    Tổng chi: <span id="exp-total" style="color: var(--danger);">0</span> đ
+  </div>
+  <ul id="exp-list"></ul>
+      </section>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

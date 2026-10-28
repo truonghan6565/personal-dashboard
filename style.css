@@ -1,0 +1,155 @@
+:root {
+  --bg-color: #121826;
+  --card-bg: #1e293b;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+  --border-color: #334155;
+  --danger: #f43f5e;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  padding: 30px 20px;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+#clock {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background: #0f172a;
+  color: var(--text-main);
+  border-radius: 6px;
+  outline: none;
+}
+
+textarea {
+  height: 140px;
+  resize: vertical;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 16px;
+  background-color: var(--accent);
+  color: #0f172a;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+ul {
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  background: #0f172a;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  border: 1px solid var(--border-color);
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.delete-btn {
+  background: none;
+  color: var(--danger);
+  border: none;
+  font-size: 1rem;
+  padding: 2px 6px;
+}
+
+.delete-btn:hover {
+  background: none;
+  color: #e11d48;
+}
+
+.status-text {
+  font-size: 0.85rem;
+  color: var(--accent);
+  margin-left: 10px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background: #0f172a;
+  color: var(--text-main);
+  border-radius: 6px;
+  outline: none;
+}
